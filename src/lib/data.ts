@@ -52,10 +52,8 @@ function nextNov30() {
 export function buildTasks(ctx: { et: string; born: boolean; married: string; tz: boolean; selb: boolean }): Task[] {
   const et = parseD(ctx.et);
   const unm = ctx.married === 'nein';
-  const tz = ctx.tz;
   const selb = ctx.selb;
   const C = CONFIG;
-  const y = nextNov30().getFullYear();
 
   const L: Task[] = [
     { id: 'dokumente', ph: 1, rec: addDays(et, -28), t: 'Dokumente für die Geburtsmeldung klären', why: 'Spital, Geburtshaus oder Zivilstandsamt nach der persönlichen Liste fragen. Meist braucht es Ausweise, Familienausweis oder Heiratsurkunde.' },
