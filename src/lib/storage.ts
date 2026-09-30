@@ -44,7 +44,7 @@ export function getSession(): string | null {
   }
 }
 
-export function setSession(user: string | null, remember = true) {
+export function setSession(user: string | null, _remember = true) {
   if (!user) {
     localStorage.removeItem(SESSION_KEY);
     return;
@@ -54,7 +54,7 @@ export function setSession(user: string | null, remember = true) {
 
 export function createAccount(
   username: string,
-  pin: string,
+  _pin: string,
   displayName: string,
   et: string,
   born: boolean
